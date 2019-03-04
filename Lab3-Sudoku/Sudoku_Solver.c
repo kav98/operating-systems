@@ -13,12 +13,23 @@
 char board[SIZE][SIZE];
 
 
+
 //
 
 
 
-void readInput(){
-    FILE *file = fopen("puzzle.txt", "r");
+void * rowSolve(void *threadid)
+{
+    
+}
+
+
+int main(void){
+
+
+
+///////////GET BOARD////////////////////////////////
+FILE *file = fopen("puzzle.txt", "r");
         char c;
         while(c != EOF){
             for(int i=0;i<SIZE;i++){
@@ -29,16 +40,7 @@ void readInput(){
             }
         }
     fclose(file);
-}
-
-
-void * rowSolve(void *threadid)
-{
-    
-}
-
-
-int main(void){
+///////////////////////////////////////////////////
 
 
 
