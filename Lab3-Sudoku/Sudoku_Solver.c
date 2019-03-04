@@ -18,24 +18,32 @@ char board[SIZE][SIZE];
 
 
 
-void * rowSolve(void *threadid)
-{
+
+int **create_board(){
+    int **board = (int **)malloc(SIZE * sizeof(int));
+    
+    
+
     
 }
 
 
+
+
+
+
+
+
+
 int main(void){
-
-
 
 ///////////GET BOARD////////////////////////////////
 FILE *file = fopen("puzzle.txt", "r");
         char c;
         while(c != EOF){
             for(int i=0;i<SIZE;i++){
-                for(int j=0;j<SIZE;i++){
+                for(int j=0;j<SIZE;j++){
                     board[i][j] = fgetc(file);
-                    puts(board[i][j]);
                 }
             }
         }
