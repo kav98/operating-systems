@@ -23,10 +23,7 @@ int **create_board(){
     //allocate the space for the rows
     int **board = (int **)malloc(SIZE * sizeof(int));
     
-    //allocate space for the coloums
-    for(int i = 0; i<SIZE;i++){
-        board[i] = (int *)malloc(SIZE*sizeof(int));
-    }
+   
     
 }
 
@@ -37,17 +34,24 @@ void free_board(int **board){
 }
 
 
+int **pop(int **board){
+    //stack.pop() function 
+}
+
+
+
+
 int  **solve_board(){
 
     while(threads_waiting < num_threads){
         while(outliers==0){
             threads_waiting ++;
-            cv.wait();
+            cv.wait();//condition variable
             threads_waiting ++;
         }
 
-        temp = outliers.pop();
-        index, value = MIN_POSSIBLE_VALUES(unsolved board)
+        temp = pop(outliers);
+        index, value = MIN_POSSIBLE_VALUES(unsolved board);
         REDUCE(index, value, board);
         if valid_grid(board_prime){
             outliers.push(board_prime)
