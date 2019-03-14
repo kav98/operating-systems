@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <unistd.h>
+#include <string.h>
+//#include <cell.h>
 
 
 
@@ -8,35 +11,37 @@
 
 #define SIZE 9
 
+typedef struct Cells{
+    int possibility[9];
+    short value;
+
+}Cell;
+
 //VARS
 
-//char board[SIZE][SIZE];
+pthread_t tid[4];
+int count;
+pthread_mutex_t lock;
+
+
+Cell board[SIZE][SIZE];
 
 
 
 //
 
 
+int pop(){
+    int data;
 
-
-int **create_board(){
-    //allocate the space for the rows
-    int **board = (int **)malloc(SIZE * sizeof(int));
-    
-   
-    
-}
-
-void free_board(int **board){
-    for(int i = 0; i< SIZE; i++){
-        free(board[i]);
-    }
 }
 
 
-int **pop(int **board){
-    //stack.pop() function 
-}
+
+
+
+
+
 
 
 
