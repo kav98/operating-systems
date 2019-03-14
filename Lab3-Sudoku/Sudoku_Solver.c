@@ -12,7 +12,7 @@
 #define SIZE 9
 
 typedef struct Cells{
-    int possibility[9];
+    int possibility[SIZE];
     short value;
 
 }Cell;
@@ -28,6 +28,7 @@ Cell board[SIZE][SIZE];
 
 
 
+
 //
 
 
@@ -35,55 +36,6 @@ int pop(){
     int data;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-int  **solve_board(){
-
-    while(threads_waiting < num_threads){
-        while(outliers==0){
-            threads_waiting ++;
-            cv.wait();//condition variable
-            threads_waiting ++;
-        }
-
-        temp = pop(outliers);
-        index, value = MIN_POSSIBLE_VALUES(unsolved board);
-        REDUCE(index, value, board);
-        if valid_grid(board_prime){
-            outliers.push(board_prime)
-            explored.push(board_prime)
-            cv.notify();
-        }
-        else{
-            explored.push(board);
-        }
-    }
-    return board_prime;
-    }
-
-void create_thread(num_threads, board){
-    for(int i=num_threads;i<SIZE){
-        num_threads(SOLVE(outliers, explored, board);
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
 
